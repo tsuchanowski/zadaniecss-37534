@@ -1,0 +1,66 @@
+.container {
+	background-color: orangered;
+	color: white;
+	height: 150px;
+	width: 976px;
+	display: inline-flex;
+	align-content: center;
+}
+
+h2 {
+	display: inline-block;
+	text-transform: uppercase;
+	border: solid transparent 2px;
+	width: 100%;
+	align-content: flex-start;
+}
+
+.lewastrona {
+	text-transform: uppercase;
+	background-color: green;
+	color: white;
+	height: 500px;
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+}
+
+.srodek {
+	text-transform: uppercase;
+	background-color: blue;
+	color: white;
+	height: 500px;
+	width: 500px;
+	display: flex;
+	flex-direction: column;
+	align-self: flex-start;
+}
+
+.prawastrona {
+	text-transform: uppercase;
+	background-color: pink;
+	color: white;
+	height: 500px;
+	width: 500px;
+	display: flex;
+	flex-direction: column;
+}
+
+
+@media screen and (max-width: 992px) {
+	.container {
+		width: 49%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	figure {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#gallery {
+		width: 100%;
+	}
+}
