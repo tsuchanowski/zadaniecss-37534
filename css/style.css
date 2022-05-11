@@ -1,66 +1,105 @@
 .container {
 	background-color: orangered;
 	color: white;
-	height: 150px;
-	width: 976px;
-	display: inline-flex;
-	align-content: center;
+	display: flex;
+	flex-wrap: wrap;
 }
 
-h2 {
-	display: inline-block;
+header {
 	text-transform: uppercase;
-	border: solid transparent 2px;
-	width: 100%;
-	align-content: flex-start;
+
 }
 
 .lewastrona {
 	text-transform: uppercase;
 	background-color: green;
 	color: white;
-	height: 500px;
-	width: 300px;
-	display: flex;
-	flex-direction: column;
+	height: 300px;
 }
 
 .srodek {
 	text-transform: uppercase;
 	background-color: blue;
 	color: white;
-	height: 500px;
-	width: 500px;
-	display: flex;
-	flex-direction: column;
-	align-self: flex-start;
+	height: 300px;
 }
 
 .prawastrona {
 	text-transform: uppercase;
 	background-color: pink;
 	color: white;
-	height: 500px;
-	width: 500px;
-	display: flex;
-	flex-direction: column;
 }
 
+.stopka {
+	text-transform: uppercase;
+	background-color: purple;
+	color: white;
+}
 
-@media screen and (max-width: 992px) {
-	.container {
-		width: 49%;
+header,
+main,
+aside,
+footer {
+	flex-basis: 100%;
+	text-align: center;
+	font-size: 30px;
+}
+
+header {
+	order: 1;
+}
+
+main {
+	order: 2;
+}
+
+aside.lewastrona {
+	order: 3;
+}
+
+aside.prawastrona {
+	order: 4;
+}
+
+footer {
+	order: 5;
+}
+
+header,
+main,
+aside,
+footer {
+	flex-basis: 100%;
+}
+
+@media screen and (min-width: 768px) {
+	main {
+		flex-basis: 75%;
+	}
+
+	aside.lewastrona {
+		order: 4;
+	}
+
+	aside.prawastrona {
+		order: 3;
+		flex-basis: 25%;
 	}
 }
 
-@media screen and (max-width: 768px) {
-	figure {
-		width: 100%;
+@media screen and (min-width: 992px) {
+	main {
+		flex-basis: 50%;
+		order: 3;
 	}
-}
 
-@media screen and (max-width: 480px) {
-	#gallery {
-		width: 100%;
+	aside.lewastrona {
+		flex-basis: 25%;
+		order: 2;
+	}
+
+	aside.prawastrona {
+		order: 3;
+		flex-basis: 25%;
 	}
 }
